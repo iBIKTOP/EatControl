@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+/*input{*/
+/*border-top: none !important;*/
+/*border-right: none !important;*/
+/*border-left: none !important;*/
+/*box-shadow: 0 1px 0px #26a69a !important;*/
+/*}*/
+/*input:focus{*/
+/*border-top: none !important;*/
+/*border-right: none !important;*/
+/*box-shadow: 0 2px 0px #26a69a !important;*/
+/*}*/
+.card {
+  box-shadow: 0px 0px 10px gray;
+  box-sizing: border-box;
+}
+.myButton {
+  color: white;
+  width: auto;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0 2px 2px gray;
+  background-color: #26a69a;
+  transition: all 0.3s;
+}
+.myButton:hover {
+  background-color: #2bbbad;
+}
+.myButton:active {
+  background: #8bdad2;
+  outline: none;
+}
+.myButton:focus {
+  outline: none;
+}
+html,
+body {
+  background-color: #fafafa;
+}
+.header {
+  background-color: #26a69a;
+  color: white;
+  box-shadow: 0 2px 5px gray;
+}
+.mat-card {
+  margin: 0.5em !important;
+  box-shadow: 0 0 10px gray !important;
+}
+.mat-card-title {
+  color: white;
+}
+.mat-divider {
+  background-color: #26a69a;
+}
+.mat-fab {
+  background-color: #26a69a !important;
+}
+i {
+  color: #26a69a;
+}
+.mat-fab:hover,
+i:hover {
+  color: #2bbbad !important;
+}

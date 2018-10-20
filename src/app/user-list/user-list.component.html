@@ -1,0 +1,35 @@
+<div class="row m-0 p-2 justify-content-between header">
+  <div class="col-8 m-0 p-0">
+    <mat-card-title>СЧЕТЧИК КАЛОРИЙ</mat-card-title>
+  </div>
+  <div class="col-4 m-0 p-0">
+    <mat-card-title class="text-right">ИТОГО: {{total}} ККАЛ</mat-card-title>
+  </div>
+</div>
+<mat-card>
+  <div *ngIf="userList">
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let food of userList, let i = index">
+          <div class="col-10 m-0 p-0" routerLink="/selectUserFood/{{i}}">
+            {{food.name}} ({{food.totalWeight}}гр.)
+          </div>
+          <div class="col-1 m-0 p-0 text-center">
+            {{food.totalCalorie}}
+          </div>
+          <div class="col-1 m-0 p-0 text-right">
+            <span>
+              <i class="fas fa-times" (click)="showDeleteFood(i)"></i>
+            </span>
+          </div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </div>
+  <div class="row m-0 p-0">
+    <div class="col-12 m-0 p-0 text-right">
+      <button mat-fab routerLink="/dbList" class="m-3"><i class="material-icons" style="color:white;">add</i></button>
+    </div>
+  </div>
+</mat-card>

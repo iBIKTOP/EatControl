@@ -1,0 +1,31 @@
+<div class="row m-0 p-2 justify-content-between header">
+  <div class="col-10 m-0 p-0">
+    <mat-card-title>РЕДАКТИРОВАНИЕ СПИСКА ПОЛЬЗОВАТЕЛЯ</mat-card-title>
+  </div>
+</div>
+<mat-card>
+
+  <mat-divider></mat-divider>
+  <small>НАИМЕНОВАНИЕ ПИЩИ:</small>
+  <mat-card-content>{{thisFood.name}}</mat-card-content>
+  <mat-divider></mat-divider>
+  <small>КАЛОРИЙНОСТЬ ПИЩИ НА {{thisFood.weight}} ГРАММ:</small>
+  <mat-card-content>{{thisFood.calorie}} ККАЛ</mat-card-content>
+  <mat-divider></mat-divider>
+  <div class="row m-0 p-0 justify-content-center align-items-center">
+    <div class="col-8 mt-3 text-center">
+      <mat-form-field>
+        <input matInput placeholder="ВЕС ПИЩИ (ГРАММ):" value="" [(ngModel)]="inputWeight">
+      </mat-form-field>
+    </div>
+  </div>
+</mat-card>
+<div class="row m-0 p-0 justify-content-between">
+  <div class="col-2 m-0 p-0 text-center">
+    <button mat-fab routerLink="/userList" class="m-3"><i class="material-icons" style="color:white;">arrow_back</i></button>
+  </div>
+  <div class="col-2 m-0 p-0 text-center">
+    <button mat-fab (click)="showSaveUserFood(inputWeight)" routerLink="/userList" class="m-3"><i class="material-icons"
+        style="color:white;">playlist_add_check</i></button>
+  </div>
+</div>

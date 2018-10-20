@@ -1,0 +1,33 @@
+<div class="row m-0 p-2 justify-content-between header">
+  <div class="col-8 m-0 p-0">
+    <mat-card-title>ВЫБОР ПИЩИ ИЗ БАЗЫ ДАННЫХ</mat-card-title>
+  </div>
+  <!-- <div class="col-4 m-0 p-0">
+      <mat-card-title class="text-right">Total: {{total}} kcal</mat-card-title>
+    </div> -->
+</div>
+<mat-card>
+
+  <mat-divider></mat-divider>
+  <small>НАИМЕНОВАНИЕ ПИЩИ:</small>
+  <mat-card-content>{{thisFood.name}}</mat-card-content>
+  <mat-divider></mat-divider>
+  <small>КАЛОРИЙНОСТЬ ПИЩИ НА {{thisFood.weight}} ГРАММ:</small>
+  <mat-card-content>{{thisFood.calorie}} ККАЛ</mat-card-content>
+  <mat-divider></mat-divider>
+  <div class="row m-0 p-0 justify-content-center align-items-center">
+    <div class="col-8 mt-3 text-center">
+      <mat-form-field>
+        <input matInput placeholder="ВЕС ПИЩИ (ГРАММ):" value="" [(ngModel)]="foodWeight">
+      </mat-form-field>
+    </div>
+  </div>
+</mat-card>
+<div class="row m-0 p-0 justify-content-between">
+  <div class="col-2 m-0 p-0 text-center">
+    <button mat-fab routerLink="/dbList" class="m-3"><i class="material-icons" style="color:white;">arrow_back</i></button>
+  </div>
+  <div class="col-2 m-0 p-0 text-center">
+    <button mat-fab (click)="showAddUserList()" routerLink="/userList" class="m-3"><i class="material-icons" style="color:white;">playlist_add_check</i></button>
+  </div>
+</div>
